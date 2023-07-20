@@ -5,11 +5,15 @@
     font-family: 'Josefin Sans', sans-serif;
 }
 
+html {
+    overflow-x: hidden;
+}
+
 body{
     background-color: rgb(228, 228, 228);
 }
 
-p {
+.word {
     margin-bottom: 16px;
     margin-top: 16px;
 }
@@ -98,13 +102,17 @@ button {
 }
 
 @media screen and (max-width: 767px) {
+    body {
+        overflow: hidden;
+    }
+
     .container {
         max-width: 90%;
         display: block;
     }
 
     .container-flex {
-        max-width: 100%;
+        max-width: 90%;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -113,7 +121,7 @@ button {
     }
     .container-flex li {
         align-items: center;
-        margin-left: 32px;
+        margin-left: 20px;
         flex-direction: column;
     }
 
@@ -123,8 +131,12 @@ button {
     }
 
     #about .container {
-        flex-direction: column;
+        display: block;
         align-items: center;
+    }
+
+    #about .container img {
+        margin-left: 36px;
     }
 
     .container-flex li img {
@@ -133,7 +145,8 @@ button {
 }
 
 
-@media screen and (min-width: 768px) and (max-width:1023px) {
+@media screen and (max-width:1023px) {
+
     .container-flex{
         max-width: 90%;
     }
