@@ -74,11 +74,9 @@ section .container h2{
 
 .container-flex {
     display: flex;
-    flex-wrap: wrap;
 }
   
 .container-flex li {
-    width: calc(25% - 20px); /* 4 colunas por linha com espaçamento */
     margin: 10px;
     padding: 10px;
     text-align: center;
@@ -135,9 +133,8 @@ button {
 }
 
 
-@media screen and (max-width: 1023px) {
-    .container-flex li {
-        width: calc(50% - 20px); /* 2 colunas por linha com espaçamento */
+@media screen and (min-width: 768px) and (max-width:1023px) {
+    .container-flex{
+        max-width: 90%;
     }
-
 }
